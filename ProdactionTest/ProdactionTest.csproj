@@ -1,0 +1,125 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{B8C2921B-D072-4FE7-8F0E-774B753D4C85}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ProdactionTest</RootNamespace>
+    <AssemblyName>ProdactionTest</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>ProdactionTest.Program</StartupObject>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="SAPApi">
+      <HintPath>C:\Users\nkurdadze\Source\Repos\RS_GE\SAPApi\bin\Debug\SAPApi.dll</HintPath>
+    </Reference>
+    <Reference Include="SAPBusinessOneSDK, Version=1.0.0.1, Culture=neutral, PublicKeyToken=c7c3cb60e45d119f, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\SAP\SAP Business One SDK\Lib\SAPBusinessOneSDK.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ProductionCostsReport.b1f.cs">
+      <DependentUpon>ProductionCostsReport.b1f</DependentUpon>
+    </Compile>
+    <Compile Include="ProductionOrederModel.cs" />
+    <Compile Include="Settings.b1f.cs">
+      <DependentUpon>Settings.b1f</DependentUpon>
+    </Compile>
+    <Compile Include="SingleReportCosts.b1f.cs">
+      <DependentUpon>SingleReportCosts.b1f</DependentUpon>
+    </Compile>
+    <None Include="APInvoice.b1f">
+      <FormCategory>SystemForm</FormCategory>
+    </None>
+    <None Include="APInvoice.b1f__orig_srf">
+      <DependentUpon>APInvoice.b1f</DependentUpon>
+    </None>
+    <None Include="BatchNumberSelection.b1f">
+      <FormCategory>SystemForm</FormCategory>
+    </None>
+    <None Include="BatchNumberSelection.b1f__orig_srf">
+      <DependentUpon>BatchNumberSelection.b1f</DependentUpon>
+    </None>
+    <None Include="BatchSetup.b1f">
+      <FormCategory>SystemForm</FormCategory>
+    </None>
+    <None Include="BatchSetup.b1f__orig_srf">
+      <DependentUpon>BatchSetup.b1f</DependentUpon>
+    </None>
+    <None Include="Form1.b1f">
+      <FormCategory>UserForm</FormCategory>
+    </None>
+    <Compile Include="APInvoice.b1f.cs">
+      <DependentUpon>APInvoice.b1f</DependentUpon>
+    </Compile>
+    <Compile Include="BatchNumberSelection.b1f.cs">
+      <DependentUpon>BatchNumberSelection.b1f</DependentUpon>
+    </Compile>
+    <Compile Include="BatchSetup.b1f.cs">
+      <DependentUpon>BatchSetup.b1f</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.b1f.cs">
+      <DependentUpon>Form1.b1f</DependentUpon>
+    </Compile>
+    <Compile Include="ProductionOrderNoCoaclulatedExpanceRecalculationHelper .b1f.cs">
+      <DependentUpon>ProductionOrderNoCoaclulatedExpanceRecalculationHelper .b1f</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Menu.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <None Include="ProductionCostsReport.b1f">
+      <FormCategory>UserForm</FormCategory>
+    </None>
+    <None Include="ProductionOrderNoCoaclulatedExpanceRecalculationHelper .b1f">
+      <FormCategory>UserForm</FormCategory>
+    </None>
+    <None Include="Settings.b1f">
+      <FormCategory>UserForm</FormCategory>
+    </None>
+    <None Include="SingleReportCosts.b1f">
+      <FormCategory>UserForm</FormCategory>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
